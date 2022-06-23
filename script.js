@@ -38,19 +38,25 @@ generateBtn.addEventListener("click", (writePassword) => {
    if(specialCharachter.checked) {
     charachter = charachter + '!#$&*'
  } 
+ 
+ 
+ charachtersLength = charachter.length;
 
- var charactersLength = charachter.length;
+ var length = prompt("Pick a number between 8-128 Charachters for your password")
+
+ console.log(length)
+ 
 
 
   for(var i = 0; i < length; i++) {
-  result += charachter.charAt(Math.floor(Math.random() * charactersLength));
+  result += charachter.charAt(Math.floor(Math.random() * charachtersLength));
   }
  
  
   return result;
 }
 
- console.log(makePassword(20));
+ console.log(makePassword(length));
 
  });
 // Add event listener to generate button
