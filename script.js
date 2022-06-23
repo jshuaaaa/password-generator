@@ -42,7 +42,12 @@ generateBtn.addEventListener("click", (writePassword) => {
  
  charachtersLength = charachter.length;
 
- var length = prompt("Pick a number length for your password")
+ var length = prompt("Pick a number length for your password between 8-128")
+
+  if (length < "8" || length > "128") {
+    alert("ERROR: Input contains an invalid amount of characters")
+    return
+  }
 
  console.log(length)
  
@@ -57,6 +62,7 @@ generateBtn.addEventListener("click", (writePassword) => {
 }
 
   alert(makePassword(length));
+  
 
  });
 // Add event listener to generate button
