@@ -27,6 +27,8 @@ generateBtn.addEventListener("click", (writePassword) => {
   let specialCharachter = document.getElementById("special-charachter");
   var result = ""
   var charachter = "abcdefghijklmnopqrstuvwxyz"
+
+  // Variables are set
   
   
   if(number.checked) {
@@ -38,6 +40,8 @@ generateBtn.addEventListener("click", (writePassword) => {
    if(specialCharachter.checked) {
     charachter = charachter + '!#$&*'
  } 
+
+ // If user checks the checkboxes adds the following characters to the strings
  
  
  charachtersLength = charachter.length;
@@ -49,6 +53,8 @@ generateBtn.addEventListener("click", (writePassword) => {
     return
   }
 
+  // Makes sure users password is within a certain range
+
  console.log(length)
  
 
@@ -56,6 +62,10 @@ generateBtn.addEventListener("click", (writePassword) => {
   for(var i = 0; i < length; i++) {
   result += charachter.charAt(Math.floor(Math.random() * charachtersLength));
   }
+
+  // Generates random password through a for loop
+
+ 
  
  
   return result;
@@ -65,7 +75,7 @@ generateBtn.addEventListener("click", (writePassword) => {
   
 
  });
-// Add event listener to generate button
+
 
 
 
